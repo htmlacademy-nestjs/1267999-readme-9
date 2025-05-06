@@ -50,16 +50,15 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": [
-        "apps/account-e2e/**/*",
-        "apps/blog-e2e/**/*",
-        "apps/notify-e2e/**/*",
-        "apps/file-vault-e2e/**/*",
-        "apps/api-e2e/**/*"
-      ]
+      "exclude": []
     }
   ],
   "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
     "test": {
       "dependsOn": ["^build"]
     }

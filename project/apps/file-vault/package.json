@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "nx": {
+    "name": "file-vault",
     "targets": {
       "build": {
         "executor": "nx:run-commands",
@@ -27,21 +28,16 @@
           "build"
         ],
         "options": {
-          "buildTarget": "@project/file-vault:build",
+          "buildTarget": "file-vault:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "@project/file-vault:build:development"
+            "buildTarget": "file-vault:build:development"
           },
           "production": {
-            "buildTarget": "@project/file-vault:build:production"
+            "buildTarget": "file-vault:build:production"
           }
-        }
-      },
-      "test": {
-        "options": {
-          "passWithNoTests": true
         }
       }
     }
